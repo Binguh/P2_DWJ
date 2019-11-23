@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="location_velib.css">
+	<link rel="stylesheet" href="fonts/font-awesome.min.css" />
+    <title>Location Vélib'</title>
+</head>
+
+<body>
+	<div id="ligne_logo">
+		<div id="ligne_logo_v" class="ligne_logo_color">
+			<i class="fa fa-bicycle" aria-hidden="true"></i>
+		</div>
+		<div id="ligne_logo_e" class="ligne_logo_color">
+			<i class="fa fa-bicycle" aria-hidden="true"></i>
+		</div>
+		<div id="ligne_logo_l" class="ligne_logo_color">
+			<i class="fa fa-bicycle" aria-hidden="true"></i>
+		</div>
+		<div id="ligne_logo_i" class="ligne_logo_color">
+			<i class="fa fa-bicycle" aria-hidden="true"></i>
+		</div>
+		<div id="ligne_logo_b"  class="ligne_logo_color">
+			<i class="fa fa-bicycle" aria-hidden="true"></i>
+		</div>
+	</div>
+	<div id="accueil">
+		<h1>Location Vélib'</h1>
+		<div id="slideshow_container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 5</div>
+				<img src="images/diapo01.jpg">
+				<div class="text">Bonjour et bienvenue !</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 5</div>
+				<img src="images/diapo02.jpg">
+				<div class="text">Séléctionner une station</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 5</div>
+				<img src="images/diapo03.jpg">
+				<div class="text">Cliquer sur réserver</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 5</div>
+				<img src="images/diapo04.jpg">
+				<div class="text">Signer pour valider votre réservation</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 5</div>
+				<img src="images/diapo05.jpg">
+				<div class="text">Votre Vélib' est réservé pendant 20 minutes</div>
+			</div>
+
+			<a id="prev">&#10094;</a>
+			<a id="next">&#10095;</a>
+		</div>
+	</div>
+	<div id="goto_map">
+		<p>
+			<a class="fleche" href="#map">&#8659;</a>
+			<a href="#map">Les stations</a>
+			<a class="fleche" href="#map">&#8659;</a>
+		</p>
+	</div>
+	<div id="map_detail">
+		<div id="map"></div>
+		<div id="detail_station">
+			<h2>Détail de la station</h2>
+			<div id="text_detail">
+				<p>Adresse : <span id="station_address">...</span></p>
+				<p><span id="station_available">...</span> Places disponibles</p>
+				<p><span id="bike_available">...</span> Vélos disponibles</p>
+				<button id="resa_velo">Réserver</button>
+			</div>
+		</div>
+	</div>
+    <div id="temps_restant" class="class_none">
+		<h3 id="temps">1 vélo réservé pour: <span id="compteur_min"></span>min <span id="compteur_sec"></span>s
+			<br>
+		Station : <span id="nom_resa"></span>
+			<br>
+		<span id="adresse_resa"></span></h3>
+		<button id="annuler_resa">Annuler</button>
+	</div>
+	<div id="canvas_win" class="class_none">
+		<span id="close_canvas">&times;</span>
+		<p>Signer pour valider votre réservation</p>
+		<canvas id="canvas">
+			<p>Désolé, votre navigateur ne supporte pas Canvas. Mettez votre navigateur à jour</p>
+		</canvas>
+		<button id="valid_canvas">Ok</button>
+		<button id="clear_canvas">Effacer</button>
+	</div>
+
+	<script src="ajax.js"></script>
+	<script src="markerclusterer.js"></script>
+    <script src="loca_velib_oriente_objet.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwwWdWhk06cTSDREqqHxJe52Q5gZUv9IE"
+    async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+</body>
+
+</html>
